@@ -17,8 +17,6 @@ You’ll learn how to turn noisy charts into sharp, focused visualizations—so 
    </tr>
 </table>
 
-![Before: Dull Dashboard](img/dull-dashboard.png)
-
 ## Introduction
 
 Your Killercoda environment comes pre-configured with the Overcharge SRE dashboard, which displays essential monitoring metrics like:
