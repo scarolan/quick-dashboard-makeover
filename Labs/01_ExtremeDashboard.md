@@ -20,12 +20,18 @@ While this dashboard contains valuable information, it's not optimized for quick
 
 ## Revamp the 'Error Rates' Panel: From Timeline to Instant Status
 
-**Before:**
-![Before: Error rate time series panel](img/error-rates-before.png)
-
-
-**After:**
-![After: Error rate stat panel with SLO](img/error-rates-after.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/error-rates-before.png" alt="Before: Error rate time series panel" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/error-rates-after.png" alt="After: Error rate stat panel with SLO" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
