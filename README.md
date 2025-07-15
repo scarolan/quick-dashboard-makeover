@@ -21,7 +21,7 @@ If you're using your own Grafana instance simply import the Overdrive.json dashb
 
 This repo comes with 2 hands-on lab exercises:
 
-1. ⛷️[Overdrive XT Dashboard Makeover](./Labs/01_ExtremeDashboard.md): Go from "meh" to Monster as you help the Overdrive XT SREs fix their boring and confusing dashboard.
+1. ⛷️[Overdrive Dashboard Makeover](./Labs/01_ExtremeDashboard.md): Go from "meh" to Monster as you help the Overdrive Energy Drink SREs fix their boring and confusing dashboard.
 2. 👨🏻‍🍳[KitchenOps](./Labs/02_KitchenOps.md): Help a restaurant achieve Michelin star status by revamping their KitchenOps dashboard to meet their culinary standards.
 
 You will find the exercises in the Labs folder. 
