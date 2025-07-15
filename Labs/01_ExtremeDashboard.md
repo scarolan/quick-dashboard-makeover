@@ -21,10 +21,11 @@ While this dashboard contains valuable information, it's not optimized for quick
 ## Revamp the 'Error Rates' Panel: From Timeline to Instant Status
 
 **Before:**
-![Before: Error Rate Panel](img/error-rate-panel.png)
+![Before: Error rate time series panel](img/error-rates-before.png)
+
 
 **After:**
-![After: Error Rate Panel with SLO](img/error-rate-panel-after.png)
+![After: Error rate stat panel with SLO](img/error-rates-after.png)
 
 ### Why make this change?
 
@@ -56,7 +57,7 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
     - Click *Add a New Mapping* and then *Range*. Set range from 0 to 1 with Display Text of *OK*. Set color to Blue
     - Click *Add a New Mapping* and then *Range*. Set range from 1 to 2 with Display Text of *Degraded*. Set color to Yellow
     - Click *Add a New Mapping* and then *Range*. Set range from 2 to 100 (or more) with Display Text of *SLO Violation*. Set color to Orange
-    - Click on *Update*
+    - Click on *Back to dashboard*
 
     The value mapping settings should look like this:
 
@@ -64,10 +65,10 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
 
 5. Change the Panel Title to *SLO Status(Errors) per Data Center*
     - Search for Title, or clear your search, it will be the first option
-    
-6. Click on the *Apply* button at the top right
 
-7. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save"
+7. Save the dashboard by clicking the "Save as copy" button in the upper right corner of the dashboard. This will create a new version of the dashboard with your changes. Name your dashboard "Overcharge SRE Dashboard". You may also update the description if you wish. Click the "Save" button to confirm. All the rest of steps will be done on this new dashboard.
+
+    ![Save Dashboard](img/save-dashboard.png)
 
 > **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
 
