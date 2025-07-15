@@ -8,7 +8,7 @@ You’ll learn how to turn noisy charts into sharp, focused visualizations—so 
    <tr>
       <td style="width: 50%; vertical-align: top;">
          <strong>Before:</strong><br>
-         <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 350px;">
+         <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 400px;">
       </td>
       <td style="width: 50%; vertical-align: top;">
          <strong>After:</strong><br>
