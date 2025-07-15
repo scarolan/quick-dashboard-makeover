@@ -1,37 +1,27 @@
-# Extreme Dashboard Makeover
+# 🏄🏻‍♀️ Extreme Dashboard Makeover 🪂
 
-
+In this Grafana Labs hands-on workshop, we'll take a boring dashboard and transform it into a visually appealing and informative one. This is a great way to learn about Grafana's features, improve your dashboard design skills, and have fun in the process!
 
 ## Requirements:
+- A Grafana instance (Cloud or OSS)
+- The built-in TestData data source
+- A modern web browser
+- Your creativity and enthusiasm!
 
-If you don't have Grafana, you have two options
-- Create a Grafana Cloud Free account. **No credit card required**.
-- Install Grafana on your laptop or server.
+## Getting Started
+If you don't already have a Grafana instance we recommend using the Killercoda track that provides you a Grafana OSS instance with the data source and dashboards already imported. Click the URL below to launch a new lab instance in a browser tab.
 
-[![Create a free account](https://img.shields.io/badge/CREATE%20A%20FREE%20CLOUD%20ACCOUNT-F46800?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com/auth/sign-up/create-user?cta=se-tutorials) [![Install Grafana](https://img.shields.io/badge/INSTALL%20GRAFANA-4A7DBA?style=for-the-badge&logo=grafana&logoColor=white)](https://grafana.com/docs/grafana/latest/setup-grafana/installation/)
+https://killercoda.com/scarolan/scenario/grafana-dashboarding
 
----
-
-## Exercices
-
-This repo comes with 2 exerices:
-
-1. "Quick dashboard makeover": a guided exercice where we will change an ugly dashboard into a nice looking one
-2. "KitchenOps": an individual challenge. Same idea but you are on your own !
-
-You will find the exercices in the folder `Exercices`.
+If you're using your own Grafana instance simply import the Overdrive.json dashboard from the Labs folder and add connect it to your TestData data source.
 
 ---
 
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
+## Lab Exercises
 
-This repo is a fork of the Extreme Dashboard Makeover developed by the Field Engineering team at Grafana Labs. It simplifies the workflow to import them as it relies only on a fake data generator (no need to have access to the data sources). But it makes sacrifice on the "Library panel" exercice as the distribution is made differently.
+This repo comes with 2 exercises:
 
-Some useful ressources from Grafana Labs and friends:
+1. Overdrive XT Dashboard Makeover: Go from "meh" to Monster as you help the Overdrive XT SREs fix their boring and confusing dashboard.
+2. KitchenOps: Help a restaurant achieve Michelin star status by revamping their KitchenOps dashboard to meet their culinary standards.
 
-* [On demand videos and webinars](https://grafana.com/videos/)
-* [Docs for LGTM, k6, OnCall, etc.](https://grafana.com/docs/)
-* [Next Grafana Labs events](https://grafana.com/about/events/)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+You will find the exercises in the Labs folder. 
