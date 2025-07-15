@@ -4,7 +4,7 @@
 Follow these steps:
 
 1. Add the data source
-    - **You probably already have one if you followed the first exercice. If so then skip to step 2**
+    - **You probably already have one if you followed the first exercise. If so then skip to step 2**
     - Click the menu button (☰) at the top left, and then click on *Data sources*.
     - Click on *Add new data source*
     - Search for *TestData* and click on it
