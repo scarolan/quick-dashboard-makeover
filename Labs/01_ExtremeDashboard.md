@@ -1,4 +1,4 @@
-🚀 Extreme Dashboard Makeover: See More, React Faster
+#🚀 Extreme Dashboard Makeover: See More, React Faster
 
 Overdrive XT’s dashboards aren’t keeping up with their high-speed operations. In this lab, you'll upgrade a real-world dashboard that’s hard to read, lacks visual clarity, and doesn’t highlight what matters most.
 
