@@ -76,6 +76,8 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
 
 7. Save the dashboard by clicking the "Save as copy" button in the upper right corner of the dashboard. This will create a new version of the dashboard with your changes. Name your dashboard "Overcharge SRE Dashboard". You may also update the description if you wish. Click the "Save" button to confirm. All the rest of steps will be done on this new dashboard.
 
+8. After saving the dashboard, click on the "⬅️ Back to dashboard" button in the upper right corner. This will put you back on the main dashboard where you can edit the next panel.
+
 > **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
 
 ## Transform the 'K8s Service Status' Panel: From Dense Table to Visual Status Board
@@ -321,7 +323,6 @@ Adding your company logo to dashboards provides several benefits:
 
 ## Final Step: Arrange Your Panels for Optimal Layout
 
-**After:**
 ![After: Optimized Dashboard Layout](img/dashboard-simple-results.png)
 
 ### Why make this change?
