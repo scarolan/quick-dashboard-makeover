@@ -1,155 +1,322 @@
-# The Quick Makeover
+# The Quick Dashboard Makeover
 
-We will be revamping the following dashboard.
+In this lab, you'll transform a basic, functional dashboard into a more visually informative and user-friendly one. Good dashboards don't just display data—they communicate insights clearly and help users make decisions quickly.
 
-![Dull Dashboard](img/dull-dashboard.png)
+![Before: Dull Dashboard](img/dull-dashboard.png)
 
-## Prerequisite: We first need to import data, dashboard, and plugins
-Follow these steps:
+## Introduction
 
-1. Add the data source
-    - Click the menu button (☰) at the top left, and then click on *Connections* -> *Data sources*.
-    - Click on *Add new data source*
-    - Search for *TestData* and click on it
-    - Press *Save & test*, you should have a confirmation "✅ Data source is working" 
-2. Import the dashboard
-    - Click the menu button (☰) at the top left, and then click on *Dashboards*.
-    - On the Dashboards screen, click the *New* button and then click *Import*.
-    - On the Import Dashboard screen, in the *Import via grafana.com* field, type in `20604` and then click *Load*.
-3. Configure dashboard's data sources:
-    - For TestData DB, choose `TestData`.
-    - Click on *Import*.
+Your Killercoda environment comes pre-configured with the "Overdrive XT" dashboard, which displays essential monitoring metrics like:
 
-While our existing dashboard already has useful information such as RED metrics - request rates, errors, and duration/latency - for our service as well as state information for the underlying Kubernetes pods and end-user activity from a geographic lens, **our aim is to make the information on the dashboard easier to understand and more visually appealing.**
+* RED metrics (Request rates, Error rates, and Duration/latency)
+* Kubernetes pod status information
+* User activity from a geographic perspective
 
-## Revamp the 'Error Rates' panel
-We will edit the Error Rates panel first.  We want to add context to what error rates are acceptable, in a danger zone, or are in violation of an internal Service Level Objective (SLO).
+While this dashboard contains valuable information, it's not optimized for quick understanding or visual appeal. Throughout this lab, we'll enhance each panel to make the information more accessible, meaningful, and actionable.
 
-![Error Rate Panel](img/error-rate-panel.png)
+**Our goal**: Transform raw data into visual insights that tell a story at a glance.
+
+## Revamp the 'Error Rates' Panel: From Timeline to Instant Status
+
+**Before:**
+![Before: Error Rate Panel](img/error-rate-panel.png)
+
+**After:**
+![After: Error Rate Panel with SLO](img/error-rate-panel-after.png)
+
+### Why make this change?
+
+The original time series graph shows error rates over time, but it has several problems:
+- The scale makes it difficult to see small but important variations
+- It doesn't clearly indicate what error levels are acceptable or problematic
+- It requires interpretation to understand current status
+
+By converting to a stat panel with color-coded thresholds, we create an instantly understandable visual indicator that shows:
+- Current error status at a glance
+- Clear categorization of error states (OK, Degraded, SLO Violation)
+- Immediate understanding of service health without needing to interpret a graph
+
+### Instructions:
 
 1. Edit the *Error Rates* panel (hover over the panel's title, click on the three vertical dots at the top right, and then click *Edit*)
+
 2. Change the Visualization type
     - At the top right, switch the Visualization Type from *Time Series* to *Stat*
+    
 3. Change the style, under *Stat styles*:
-    - **It's easier to find the options by searching for their names. Type the name *Stat style* to easily find what you are looking for**
-    - Change *Orientation* from Auto to Horizontal.
-    - Change *Color Mode* from Value to Background Gradient.
-4. Customize colors:
-    - Expand the 'Value Mappings' section and then click *Add value mappings*:
-    - Click on the trash icon 🗑 to remove that empty default mapping.
-    - Click *Add a New Mapping* and then *Range*. Set range from 0 to 1 with Display Text of *OK*. Set color to Blue.
-    - Click *Add a New Mapping* and then *Range*. Set range from 1 to 2 with Display Text of *Degraded*. Set color to Yellow.
-    - Click *Add a New Mapping* and then *Range*. Set range from 2 to 100 (or more) with Display Text of *SLO Violation*. Set color to Orange.
+    - **Tip:** Use the search bar at the top of the panel editor to quickly find options
+    - Change *Orientation* from Auto to Horizontal
+    - Change *Color Mode* from Value to Background Gradient
+    
+4. Add context with value mappings:
+    - Expand the 'Value Mappings' section and then click *Add value mappings*
+    - Click on the trash icon 🗑 to remove that empty default mapping
+    - Click *Add a New Mapping* and then *Range*. Set range from 0 to 1 with Display Text of *OK*. Set color to Blue
+    - Click *Add a New Mapping* and then *Range*. Set range from 1 to 2 with Display Text of *Degraded*. Set color to Yellow
+    - Click *Add a New Mapping* and then *Range*. Set range from 2 to 100 (or more) with Display Text of *SLO Violation*. Set color to Orange
     - Click on *Update*
 
     The value mapping settings should look like this:
 
     ![Value Mappings](img/value-mappings.png)
 
-5.  Change the Panel Title to *SLO Status(Errors) per Data Center*
+5. Change the Panel Title to *SLO Status(Errors) per Data Center*
     - Search for Title, or clear your search, it will be the first option
-6.  Click on the *Apply* blue bottom at the top right
-7.  Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
+    
+6. Click on the *Apply* button at the top right
 
-> Grafana dashboards are versioned. Saving frequently makes it easier to cancel changes and differentiate the modifications.
+7. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save"
 
-## Make the 'K8s Service Status' panel more "visual"
-This table is showing us tons of information that we already know.  The original goal of this table was to show a state of 1 (UP) or 0 (DOWN) for each of our service containers. Our new goal is to simplify the presentation of the information using a *polystat* panel.
+> **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
+
+## Transform the 'K8s Service Status' Panel: From Dense Table to Visual Status Board
+
+**Before:**
+![Before: K8s Service Status Table](img/k8s-service-status.png)
+
+**After:**
+![After: K8s Service Status Visual Indicators](img/k8s-status-stat.png)
+
+### Why make this change?
+
+The original table format has several limitations:
+- It's text-heavy and requires careful reading to interpret
+- Status values (0 or 1) aren't immediately meaningful to viewers
+- It takes up valuable dashboard space with repetitive information
+
+By transforming it into a stat panel with visual indicators, we:
+- Create an at-a-glance view of container status
+- Use color coding for immediate status recognition (blue for UP, orange for DOWN)
+- Focus only on the essential information (container name and status)
+- Make problems immediately visible without requiring detailed analysis
+
+### Instructions:
 
 1. Edit the *K8s Service Status* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
+
 2. Switch the Visualization Type from *Table* to *Stat*
+
 3. In the Value options, change *Show* to All values
-4. Change the *Color mode* to Background Solid.
+
+4. Change the *Color mode* to Background Solid
+
 5. Change the Thresholds colors and value:
     * For the Base threshold, change the color to Orange by clicking on the green circle
-    * Change the existing treshold to 1 and the color to blue
+    * Change the existing threshold to 1 and the color to blue
+
 6. Change the *value mappings*:
-    * Add a Value mapping, setting the value condition to 1, and the display text to *UP*.
-    * Add a second Value mapping, condition 0 and display text *DOWN*.
-7. It's hard to see the title. This comes from the data. In this case, we don't want to change the data. Let's imagine we can't change the table from the query. We will transform the data:
+    * Add a Value mapping, setting the value condition to 1, and the display text to *UP*
+    * Add a second Value mapping, condition 0 and display text *DOWN*
+
+7. Clean up the display with transformations:
     - On the left side, under the visualization, click on *Transformations* -> *Add transformation*
     - Search for *Organize fields*
-    - You can hide the fields by clicking on the small eye close to the name of the field. Hide them all except *Value* and *container*
-8. The panel should look similar to what is shown below:
+    - Hide unnecessary fields by clicking on the eye icon next to each field name. Hide all fields except *Value* and *container*
+
+8. The panel should now look similar to this clean, visual status board:
 
     ![K8s Service Status](img/k8s-status-stat.png)
 
-9.  Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side
+9. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side
 
-## Convert the 'Customer Activity' panel from a stat panel to a geomap
-This one is a mess. I've been told that this data is from [Loki](https://grafana.com/oss/loki/), our logging tool, and represents the number of hits coming from each geographic region. It is colorful, but I have a very difficult time interpreting the information.  Let's change the visualization to a map!
+## Visualize the 'Customer Activity' Panel: From Abstract Stats to Geographic Insights
+
+**Before:**
+![Before: Customer Activity Stats](img/customer-activity-before.png)
+
+**After:**
+![After: Customer Activity Geomap](img/customer-activity-after.png)
+
+### Why make this change?
+
+The original stat panel presents geographic data in a non-geographic way:
+- It displays country codes and hit counts as abstract numbers
+- It fails to convey the spatial relationships between user locations
+- It makes patterns and regional hotspots nearly impossible to identify
+
+By converting to a geomap visualization, we:
+- Create an intuitive representation of geographic data
+- Enable immediate identification of high-traffic regions
+- Make patterns visible through marker size and color intensity
+- Transform raw numbers into an actionable geographic intelligence
+
+### Instructions:
+
 1. Edit the *Customer Activity* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
 
 2. Switch the Visualization Type from *Stat* to *Geomap*
 
-3. We want to add markers on the map.  Again using the *Search options* in the top right, find the existing layer under *Map layers*,  "Layer 1 *markers*".
+3. Configure the map markers:
+   - Using the search options in the top right, locate the existing layer under *Map layers*, labeled "Layer 1 *markers*"
 
-4. We want a lookup of the country by our *geoip_country_code* field.
-    - To do this, under *Location Mode*, click *Lookup*
-    - under *Lookup Field*, choose *geoip_country_code*.  You should now see data on your map. But we're not done!
+4. Connect the geographic data:
+   - Under *Location Mode*, click *Lookup*
+   - For *Lookup Field*, select *geoip_country_code*
+   - You should now see data points appearing on the map
 
-5. Under Styles, change Size from *Fixed Value* to *Value #Hits by geolocation*.
+5. Make the visualization more informative:
+   - Under Styles, change Size from *Fixed Value* to *Value #Hits by geolocation*
+   - This makes busier locations have larger markers, creating visual emphasis
 
-6. Change Color from *Fixed color* to *Value #Hits by geolocation*.
+6. Add color variation for better insight:
+   - Change Color from *Fixed color* to *Value #Hits by geolocation*
+   - This creates a heat map effect, with color intensity indicating activity levels
 
 7. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
 
-## Improve the 'Latency for Sockshop App' panel
+## Enhance the 'Latency for Sockshop App' Panel: Improving Visual Distinction
 
-The Latency panel seems ok but it was not updated 
+**Before:**
+![Before: Latency Panel with Similar Colors](img/latency-before.png)
+
+**After:**
+![After: Latency Panel with Enhanced Visibility](img/latency-after.png)
+
+### Why make this change?
+
+The original latency panel has functional issues that hinder interpretation:
+- Multiple blue lines with similar shades make it difficult to distinguish between services
+- Thin lines can be hard to follow, especially when they cross
+- The fill under the lines creates visual clutter rather than clarity
+
+By enhancing the visual distinction, we:
+- Use contrasting colors to immediately differentiate between services
+- Make lines thicker for better visibility and tracking
+- Remove the fill to focus on the trend lines themselves
+- Enable quicker identification of specific service performance issues
+
+### Instructions:
 
 1. Edit the *Latency for Sockshop App* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
 
-2. Let's make it easier to see the differences between the lines:
-    - We notice that the two blue colors are just too similar, and we want to make it obvious. So, right from the dashboard, we click on the blue line associated with Orders in the legend, and a set of default colors appear. Choose Purple.
-    - Change the *graph styles > Line width* to 2
-    - change the *Fill opacity* to 0
+2. Improve line differentiation:
+   - From the dashboard view, click on the blue line associated with Orders in the legend
+   - From the color options that appear, select Purple to create clear visual separation
+   - Under *graph styles*, increase the *Line width* to 2 for better visibility
+   - Set the *Fill opacity* to 0 to remove distracting background fills
     
-    ![Graph styles](img/Graph-styles.png)
+   ![Graph styles](img/Graph-styles.png)
 
 3. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
-## Convert the 'Server Request Rates' panel from graph to a bar gauge panel
+## Transform the 'Server Request Rates' Panel: From Trend Graph to Actionable Gauge
 
-Like our first panel, we want context to understand what good looks like. Knowing our internal data patterns, we want to avoid service overload conditions where end-user performance can be affected.
+**Before:**
+![Before: Server Request Rates Timeline](img/server-request-rates-before.png)
+
+**After:**
+![After: Server Request Rates Bar Gauge](img/webserver-request-rates.png)
+
+### Why make this change?
+
+The original time series graph shows historical request rates, but has limitations:
+- It doesn't clearly indicate when values become concerning
+- It requires mental processing to determine current status
+- The trends take up space without adding immediate decision-making value
+
+By converting to a bar gauge with thresholds, we:
+- Create an immediate visual indicator of current load levels
+- Establish clear thresholds for normal, elevated, and concerning request rates
+- Enable operators to quickly identify when intervention might be needed
+- Add visual interest with the retro LCD style while maintaining functionality
+
+### Instructions:
+
 1. Edit the *Server Request Rates* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
 
 2. Switch the Visualization Type from *Time Series* to *Bar Gauge*
 
-3. Change the Panel Title to *Server Request Rates per Second* (i.e. add "per Second" for clarity)
+3. Improve clarity with a better title:
+   - Change the Panel Title to *Server Request Rates per Second* (adding "per Second" clarifies the measurement unit)
 
-4. Under *Bar Gauge*:
-    * Change Orientation (Layout Orientation) from Auto to Horizontal.
-    * Change Display Mode from *Gradient* to *Retro LCD*
+4. Configure the bar gauge appearance:
+   - Under *Bar Gauge*, change Orientation (Layout Orientation) from Auto to Horizontal
+   - Change Display Mode from *Gradient* to *Retro LCD* for better visual distinction
 
-5. Under Thresholds (At the bottom of the menu panel on the right):
-    * Change the base color from Green to Blue
-    * Change the 2nd color from Red to Yellow and the threshold level from 80 to 45.
-    * Add a third threshold level, 55.  Set color to Orange.
+5. Add meaningful thresholds to indicate performance boundaries:
+   - Under Thresholds, change the base color from Green to Blue for normal operation
+   - Change the 2nd threshold color from Red to Yellow and set the level to 45 (warning level)
+   - Add a third threshold level at 55, with color set to Orange (critical level)
 
-Below is what your panel should look like:
+   When configured correctly, your panel should look like this:
 
-![Webserver Request Rates](img/webserver-request-rates.png)
+   ![Webserver Request Rates](img/webserver-request-rates.png)
 
 6. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
-## Add our company logo
-For a bit of flair, we'd like to add our company logo.  To do so:
-1. In the (formerly) dull dashboard, click on the _Add_ button, then select _Visualization_.
-2. On the right hand side, click on the default "Time Series" and search for 'Text'. Choose a *Text* panel.
-3. For _mode_ in the bottom right, switch from Markdown to HTML.
-4. Remove the default text and paste in the following HTML:
+## Add Your Company Logo: Creating Professional Branding
+
+**Before:**
+![Before: Dashboard Without Logo](img/dashboard-without-logo.png)
+
+**After:**
+![After: Dashboard With Professional Logo](img/dashboard-with-logo.png)
+
+### Why make this change?
+
+Adding your company logo to dashboards provides several benefits:
+- Creates a professional, branded appearance
+- Provides immediate visual identification of your monitoring ecosystem
+- Establishes context for viewers about who owns/maintains the dashboard
+- Makes screenshots and shared views instantly recognizable
+
+### Instructions:
+
+1. In the dashboard, click on the _Add_ button, then select _Visualization_
+
+2. Switch the visualization type:
+   - On the right panel, click on the default "Time Series" visualization
+   - Search for 'Text' and select the *Text* panel
+
+3. Configure for HTML content:
+   - For _mode_ in the bottom right, switch from Markdown to HTML
+   - Remove the default text and paste in the following HTML:
 
     ```html
     <center><img align="center" src="https://i.pinimg.com/originals/74/a0/a5/74a0a51848fb3717c671598dc675c654.jpg" ></center>
     ```
 
-5. Remove the Panel Title, Toggle the  _Transparent Background_ to enabled.
-6. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
-7. Size the panel appropriately.
+4. Optimize the appearance:
+   - Remove the Panel Title (clear the title field)
+   - Toggle _Transparent Background_ to enabled for seamless integration
 
-## Arrange our panels
-Finally, we need to arrange our panels to improve readability. Here is an example. Feel free to play around !
+5. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side
 
-![Final-Dashboard One](img/dashboard-simple-results.png)
+6. Size and position the logo panel appropriately on your dashboard
+
+## Final Step: Arrange Your Panels for Optimal Layout
+
+**Before:**
+![Before: Unorganized Panel Layout](img/dashboard-unorganized.png)
+
+**After:**
+![After: Optimized Dashboard Layout](img/dashboard-simple-results.png)
+
+### Why make this change?
+
+The arrangement of panels is as important as their content:
+- Logical grouping helps users find related information quickly
+- Proper sizing ensures important metrics get appropriate emphasis
+- Good spacing improves readability and reduces visual clutter
+- Thoughtful organization creates a natural information flow
+
+### Instructions:
+
+1. Click and drag panels to reposition them on the dashboard
+
+2. Resize panels by clicking and dragging their corners or edges
+
+3. Consider these layout principles:
+   - Place the most critical information at the top or in the upper left (where eyes naturally go first)
+   - Group related metrics near each other
+   - Ensure sufficient space between panels for visual separation
+   - Size panels according to their importance and information density
+
+4. Here's an example of an effective arrangement, but feel free to create your own layout:
+
+   ![Final Dashboard Layout](img/dashboard-simple-results.png)
+
+5. Save your final dashboard when you're satisfied with the layout
+
+Congratulations! You've transformed a basic dashboard into an informative, visually appealing monitoring tool that communicates insights at a glance.
