@@ -7,16 +7,12 @@ You’ll learn how to turn noisy charts into sharp, focused visualizations—so 
 <table style="max-width: 800px; width: 100%;">
    <tr>
       <td style="width: 50%; vertical-align: top;">
-         <div style="display: flex; flex-direction: column; justify-content: flex-start; height: 100%;">
-            <strong>Before:</strong><br>
-            <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 350px;">
-         </div>
+         <strong>Before:</strong><br>
+         <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 350px;">
       </td>
       <td style="width: 50%; vertical-align: top;">
-         <div style="display: flex; flex-direction: column; justify-content: flex-start; height: 100%;">
-            <strong>After:</strong><br>
-            <img src="img/dashboard-simple-results.png" alt="After: Functional and Radical dashboard" style="width: 550px;">
-         </div>
+         <strong>After:</strong><br>
+         <img src="img/dashboard-simple-results.png" alt="After: Functional and Radical dashboard" style="width: 550px;">
       </td>
    </tr>
 </table>
