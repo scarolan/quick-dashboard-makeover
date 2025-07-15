@@ -6,11 +6,11 @@ You’ll learn how to turn noisy charts into sharp, focused visualizations—so 
 
 <table style="max-width: 800px; width: 100%;">
    <tr>
-      <td style="width: 50%; vertical-align: top;">
+      <td style="width: 40%; vertical-align: top;">
          <strong>Before:</strong><br>
          <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 100%;">
       </td>
-      <td style="width: 50%; vertical-align: top;">
+      <td style="width: 60%; vertical-align: top;">
          <strong>After:</strong><br>
          <img src="img/dashboard-simple-results.png" alt="After: Functional and Radical dashboard" style="width: 100%;">
       </td>
