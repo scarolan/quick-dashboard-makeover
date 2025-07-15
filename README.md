@@ -13,7 +13,7 @@ If you don't already have a Grafana instance we recommend using the Killercoda t
 
 https://killercoda.com/scarolan/scenario/grafana-dashboarding
 
-If you're using your own Grafana instance simply import the Overcharge.json dashboard from the Labs folder and add connect it to your TestData data source.
+If you're using your own Grafana instance simply import the Overcharge.json dashboard from the Labs folder and connect it to your TestData data source.
 
 ---
 
