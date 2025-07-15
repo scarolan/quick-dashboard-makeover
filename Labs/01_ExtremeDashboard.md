@@ -332,7 +332,7 @@ Adding your company logo to dashboards provides several benefits:
 
 6. Size and position the logo panel appropriately on your dashboard
 
-## Final Step: Arrange Your Panels for Optimal Layout
+## Final Step: Optimize the Dashboard Layout
 
 ![After: Optimized Dashboard Layout](img/dashboard-simple-results.png)
 
