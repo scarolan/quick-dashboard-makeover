@@ -1,4 +1,4 @@
-# KitchenOps Challenge !
+# 👨🏻‍🍳 KitchenOps Challenge
 
 ## Prerequisite: We first need to import data, dashboard, and plugins
 Follow these steps:

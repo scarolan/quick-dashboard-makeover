@@ -1,23 +1,6 @@
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
-<a name="readme-top"></a>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
+# Extreme Dashboard Makeover
 
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <h3 align="center">Quick dashboard makeover</h3>
-  <img alt="Static Badge" style="border-radius:16px" src="https://img.shields.io/badge/GRAFANA-F46800?style=for-the-badge&logo=grafana&logoColor=white">
-  <p align="center">
-    Learn by doing. Basics about dahsboards in Grafana, manipulate panels and options.
-  </p>
-</div>
 
 ## Requirements:
 
