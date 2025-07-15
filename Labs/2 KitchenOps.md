@@ -19,9 +19,9 @@ Follow these steps:
 Our dashboard already has useful information but it's difficult to read. **Let's make it better**
 
 ## Challenge description
-You have been recently hired to run your restaurant's KitchenOps program. The restaurant is so close to its 5th Michelin star, you can taste it !
+You have been recently hired to run your restaurant's KitchenOps program. The restaurant is so close to its Michelin star, you can taste it !
 
-One way to attain that 5th star is to deliver consistently perfect results in meal preparation. This means having complete control over:
+One way to attain that star is to deliver consistently perfect results in meal preparation. This means having complete control over:
 * Oven, stovetop, and grill temperature settings
 * Shelflife of the freshest ingredients (and the soup!)
 * Consistency of food preparation times per meal time
