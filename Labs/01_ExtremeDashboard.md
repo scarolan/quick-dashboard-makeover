@@ -4,6 +4,19 @@ Overcharge’s dashboards aren’t keeping up with their high-speed operations. 
 
 You’ll learn how to turn noisy charts into sharp, focused visualizations—so teams can spot issues early, respond quickly, and keep things running smoothly. Better dashboards mean fewer surprises, faster decisions, and a lot less fire-fighting. 🔥🧯
 
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/dull-dashboard.png" alt="Before: Sad and boring dashboard" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/dashboard-simple-results.png" alt="After: Functional and Radical dashboard" style="width: 100%;">
+      </td>
+   </tr>
+</table>
+
 ![Before: Dull Dashboard](img/dull-dashboard.png)
 
 ## Introduction
