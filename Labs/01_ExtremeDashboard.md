@@ -56,8 +56,10 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
     - **Tip:** Use the search bar at the top of the panel editor to quickly find options
     - Change *Orientation* from Auto to Horizontal
     - Change *Color Mode* from Value to Background Gradient
+
+4. Under *Standard Options*, delete the Max value of 100. This allows the panel to auto-scale based on the data, which is more flexible for different error rates.
     
-4. Add context with value mappings:
+5. Add context with value mappings:
     - Expand the 'Value Mappings' section and then click *Add value mappings*
     - Click on the trash icon 🗑 to remove that empty default mapping
     - Click *Add a New Mapping* and then *Range*. Set range from 0 to 1 with Display Text of *OK*. Set color to Blue
@@ -69,7 +71,7 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
 
     ![Value Mappings](img/value-mappings.png)
 
-5. Change the Panel Title to *SLO Status(Errors) per Data Center*
+6. Change the Panel Title to *SLO Status(Errors) per Data Center*
     - Search for Title, or clear your search, it will be the first option
 
 7. Save the dashboard by clicking the "Save as copy" button in the upper right corner of the dashboard. This will create a new version of the dashboard with your changes. Name your dashboard "Overcharge SRE Dashboard". You may also update the description if you wish. Click the "Save" button to confirm. All the rest of steps will be done on this new dashboard.
@@ -131,11 +133,18 @@ By transforming it into a stat panel with visual indicators, we:
 
 ## Visualize the 'Customer Activity' Panel: From Abstract Stats to Geographic Insights
 
-**Before:**
-![Before: Customer Activity Stats](img/customer-activity-before.png)
-
-**After:**
-![After: Customer Activity Geomap](img/customer-activity-after.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/customer-activity-before.png" alt="Before: Customer Activity Stats" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/customer-activity-after.png" alt="After: Customer Activity Geomap" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
@@ -175,13 +184,20 @@ By converting to a geomap visualization, we:
 7. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
 
-## Enhance the 'Latency for Sockshop App' Panel: Improving Visual Distinction
+## Enhance the 'Latency for Overdrive App' Panel: Improving Visual Distinction
 
-**Before:**
-![Before: Latency Panel with Similar Colors](img/latency-before.png)
-
-**After:**
-![After: Latency Panel with Enhanced Visibility](img/latency-after.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/latency-before.png" alt="Before: Latency Panel with Similar Colors" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/latency-after.png" alt="After: Latency Panel with Enhanced Visibility" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
@@ -198,25 +214,30 @@ By enhancing the visual distinction, we:
 
 ### Instructions:
 
-1. Edit the *Latency for Sockshop App* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
+1. Edit the *Latency for Overdrive App* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
 
 2. Improve line differentiation:
    - From the dashboard view, click on the blue line associated with Orders in the legend
    - From the color options that appear, select Purple to create clear visual separation
    - Under *graph styles*, increase the *Line width* to 2 for better visibility
    - Set the *Fill opacity* to 0 to remove distracting background fills
-    
-   ![Graph styles](img/Graph-styles.png)
 
 3. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
 ## Transform the 'Server Request Rates' Panel: From Trend Graph to Actionable Gauge
 
-**Before:**
-![Before: Server Request Rates Timeline](img/server-request-rates-before.png)
-
-**After:**
-![After: Server Request Rates Bar Gauge](img/webserver-request-rates.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/webserver-request-rates-before.png" alt="Before: Server Request Rates Timeline" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/webserver-request-rates-after.png" alt="After: Server Request Rates Bar Gauge" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
@@ -249,19 +270,22 @@ By converting to a bar gauge with thresholds, we:
    - Change the 2nd threshold color from Red to Yellow and set the level to 45 (warning level)
    - Add a third threshold level at 55, with color set to Orange (critical level)
 
-   When configured correctly, your panel should look like this:
-
-   ![Webserver Request Rates](img/webserver-request-rates.png)
-
 6. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
 ## Add Your Company Logo: Creating Professional Branding
 
-**Before:**
-![Before: Dashboard Without Logo](img/dashboard-without-logo.png)
-
-**After:**
-![After: Dashboard With Professional Logo](img/dashboard-with-logo.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/dashboard-without-logo.png" alt="Before: Dashboard Without Logo" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/dashboard-with-logo.png" alt="After: Dashboard With Professional Logo" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
@@ -297,9 +321,6 @@ Adding your company logo to dashboards provides several benefits:
 
 ## Final Step: Arrange Your Panels for Optimal Layout
 
-**Before:**
-![Before: Unorganized Panel Layout](img/dashboard-unorganized.png)
-
 **After:**
 ![After: Optimized Dashboard Layout](img/dashboard-simple-results.png)
 
@@ -323,10 +344,6 @@ The arrangement of panels is as important as their content:
    - Ensure sufficient space between panels for visual separation
    - Size panels according to their importance and information density
 
-4. Here's an example of an effective arrangement, but feel free to create your own layout:
-
-   ![Final Dashboard Layout](img/dashboard-simple-results.png)
-
-5. Save your final dashboard when you're satisfied with the layout
+4. Save your final dashboard when you're satisfied with the layout
 
 Congratulations! You've transformed a basic dashboard into an informative, visually appealing monitoring tool that communicates insights at a glance.
