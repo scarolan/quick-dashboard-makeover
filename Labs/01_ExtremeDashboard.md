@@ -186,7 +186,7 @@ By converting to a geomap visualization, we:
 7. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side. Add an optional note, then press "Save".
 
 
-## Enhance the 'Latency for Overdrive App' Panel: Improving Visual Distinction
+## Enhance the 'Latency for Overcharge App' Panel: Improving Visual Distinction
 
 <table style="max-width: 800px; width: 100%;">
    <tr>
@@ -216,7 +216,7 @@ By enhancing the visual distinction, we:
 
 ### Instructions:
 
-1. Edit the *Latency for Overdrive App* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
+1. Edit the *Latency for Overcharge App* panel (hover over the panel's title, click the three vertical dots to show the context menu, and then click *Edit*)
 
 2. Improve line differentiation:
    - From the dashboard view, click on the blue line associated with Orders in the legend

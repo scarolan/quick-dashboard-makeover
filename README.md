@@ -13,7 +13,7 @@ If you don't already have a Grafana instance we recommend using the Killercoda t
 
 https://killercoda.com/scarolan/scenario/grafana-dashboarding
 
-If you're using your own Grafana instance simply import the Overdrive.json dashboard from the Labs folder and add connect it to your TestData data source.
+If you're using your own Grafana instance simply import the Overcharge.json dashboard from the Labs folder and add connect it to your TestData data source.
 
 ---
 
@@ -21,7 +21,7 @@ If you're using your own Grafana instance simply import the Overdrive.json dashb
 
 This repo comes with 2 hands-on lab exercises:
 
-1. ⛷️[Overdrive Dashboard Makeover](./Labs/01_ExtremeDashboard.md): Go from "meh" to Monster as you help the Overdrive Energy Drink SREs fix their boring and confusing dashboard.
+1. ⛷️[Overcharge Dashboard Makeover](./Labs/01_ExtremeDashboard.md): Go from "meh" to Monster as you help the Overcharge Energy Drink SREs fix their boring and confusing dashboard.
 2. 👨🏻‍🍳[KitchenOps](./Labs/02_KitchenOps.md): Help a restaurant achieve Michelin star status by revamping their KitchenOps dashboard to meet their culinary standards.
 
 You will find the exercises in the Labs folder. 
