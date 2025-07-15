@@ -78,7 +78,7 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
 
 8. After saving the dashboard, click on the "⬅️ Back to dashboard" button in the upper right corner. This will put you back on the main dashboard where you can edit the next panel.
 
-> **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
+> 💡 **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
 
 ## Transform the 'K8s Service Status' Panel: From Dense Table to Visual Status Board
 
