@@ -1,7 +1,6 @@
 # 🚀 Extreme Dashboard Makeover
 
-**About Overcharge:**  
-Overcharge is the energy drink company for those who live life at full throttle. Their XTREME approach powers athletes, gamers, and high-performers with relentless energy and bold flavors. When speed and intensity matter, Overcharge delivers—no compromises, no slowing down.
+_Overcharge™_ is the energy drink company for those who live life at full throttle. Their XTREME approach powers athletes, gamers, and high-performers with relentless energy and bold flavors. When speed and intensity matter, Overcharge delivers—no compromises, no slowing down.
 
 Overcharge’s Grafana dashboards aren’t keeping up with their high-speed operations. In this lab, you'll upgrade a real-world dashboard that’s hard to read, lacks visual clarity, and doesn’t highlight what matters most.
 
