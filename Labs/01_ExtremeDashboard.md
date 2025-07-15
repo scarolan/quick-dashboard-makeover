@@ -1,6 +1,6 @@
 # 🚀 Extreme Dashboard Makeover
 
-Overdrive XT’s dashboards aren’t keeping up with their high-speed operations. In this lab, you'll upgrade a real-world dashboard that’s hard to read, lacks visual clarity, and doesn’t highlight what matters most.
+Overcharge’s dashboards aren’t keeping up with their high-speed operations. In this lab, you'll upgrade a real-world dashboard that’s hard to read, lacks visual clarity, and doesn’t highlight what matters most.
 
 You’ll learn how to turn noisy charts into sharp, focused visualizations—so teams can spot issues early, respond quickly, and keep things running smoothly. Better dashboards mean fewer surprises, faster decisions, and a lot less fire-fighting. 🔥🧯
 
@@ -8,7 +8,7 @@ You’ll learn how to turn noisy charts into sharp, focused visualizations—so 
 
 ## Introduction
 
-Your Killercoda environment comes pre-configured with the "Overdrive XT" dashboard, which displays essential monitoring metrics like:
+Your Killercoda environment comes pre-configured with the Overcharge SRE dashboard, which displays essential monitoring metrics like:
 
 * RED metrics (Request rates, Error rates, and Duration/latency)
 * Kubernetes pod status information
