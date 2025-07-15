@@ -74,17 +74,22 @@ By converting to a stat panel with color-coded thresholds, we create an instantl
 
 7. Save the dashboard by clicking the "Save as copy" button in the upper right corner of the dashboard. This will create a new version of the dashboard with your changes. Name your dashboard "Overcharge SRE Dashboard". You may also update the description if you wish. Click the "Save" button to confirm. All the rest of steps will be done on this new dashboard.
 
-    ![Save Dashboard](img/save-dashboard.png)
-
 > **Tip:** Grafana dashboards are versioned. Saving frequently makes it easier to track changes and revert if needed.
 
 ## Transform the 'K8s Service Status' Panel: From Dense Table to Visual Status Board
 
-**Before:**
-![Before: K8s Service Status Table](img/k8s-service-status.png)
-
-**After:**
-![After: K8s Service Status Visual Indicators](img/k8s-status-stat.png)
+<table style="max-width: 800px; width: 100%;">
+   <tr>
+      <td style="width: 50%;">
+         <strong>Before:</strong><br>
+         <img src="img/k8s-service-status-before.png" alt="Before: K8s Service Status Table" style="width: 100%;">
+      </td>
+      <td style="width: 50%;">
+         <strong>After:</strong><br>
+         <img src="img/k8s-service-status-after.png" alt="After: K8s Service Status Visual Indicators" style="width: 100%;">
+      </td>
+   </tr>
+</table>
 
 ### Why make this change?
 
@@ -120,13 +125,9 @@ By transforming it into a stat panel with visual indicators, we:
 7. Clean up the display with transformations:
     - On the left side, under the visualization, click on *Transformations* -> *Add transformation*
     - Search for *Organize fields*
-    - Hide unnecessary fields by clicking on the eye icon next to each field name. Hide all fields except *Value* and *container*
+    - Hide unnecessary fields by clicking on the eye icon next to each field name. Hide all fields except *Value* and *container*. The panel should now look like the "after" image above, with clear visual indicators for container status.
 
-8. The panel should now look similar to this clean, visual status board:
-
-    ![K8s Service Status](img/k8s-status-stat.png)
-
-9. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side
+8. Save the dashboard by clicking the "Save dashboard" button in the top bar, on the right side
 
 ## Visualize the 'Customer Activity' Panel: From Abstract Stats to Geographic Insights
 
